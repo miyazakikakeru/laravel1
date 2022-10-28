@@ -17,4 +17,7 @@ use App\Http\Controllers\ConrtactController;
 
 Route::get('/', [ConrtactController::class, 'index']);
 Route::post('/', [ConrtactController::class, 'check']);
-Route::post('/comp', [ConrtactController::class, 'comp']);
+Route::post('/home', [ConrtactController::class, 'home']); 
+Route::post('/home/search', [ConrtactController::class, 'search']);
+Route::post('/home/detail', [ConrtactController::class, 'detail']);//詳細
+

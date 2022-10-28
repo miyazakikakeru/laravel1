@@ -14,12 +14,10 @@ class ConrtactController extends Controller
 
     public function check(ConrtactRequest $request){
         $inputs = $request->all();
-        return view('check', $inputs);
+        return view('check',$inputs);
     }
-    public function comp(Request $request){
+    public function home(Request $request){
         $inputs = $request->all();
-        // mail送信
-        \Mail::send(new ContactThanks($inputs));
-        return view('Comp',$inputs);
+        return view('home',$inputs);
     }
 }
